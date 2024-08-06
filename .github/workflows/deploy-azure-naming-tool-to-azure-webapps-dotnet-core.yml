@@ -95,7 +95,7 @@ jobs:
     needs: [build,check-secrets]
     if: needs.check-secrets.outputs.secrets-valid == 'true'
     environment:
-      name: 'Development'
+      name: 'Production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
 
     steps:
